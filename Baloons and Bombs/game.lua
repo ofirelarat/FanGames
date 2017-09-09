@@ -9,7 +9,8 @@ local TimerText
 local score = 0
 local scoreText
 local sceneGruop
-
+local sound_pop
+local sound_bomb
 
 local function readScoreAndSetScore()
 	local content = 0
@@ -57,6 +58,7 @@ local function balloonTouched(event)
         event.target:removeSelf()
         score = score + 1
         scoreText.text = score
+		media.playEventSound(sound_pop)
     end
 end
 
@@ -66,6 +68,7 @@ local function bombTouched(event)
             event.target:removeSelf()
             score = math.floor(score * 0.5)
             scoreText.text = score
+			media.playEventSound(sound_bomb)
 	end
 end
 
@@ -131,6 +134,9 @@ function scene:create(event)
 
 	timer.performWithDelay(1000,cutDown,-1)
 	timer.performWithDelay( 500, addNewBalloonOrBomb, 0 )
+
+	sound_pop=media.newEventSound("sounds/pop.mp3")
+	sound_bomb=media.newEventSound("sounds/shoot.mp3")
 
 	physics.pause()
 end

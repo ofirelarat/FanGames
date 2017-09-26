@@ -1,0 +1,46 @@
+body {
+	background-color:#ecf0f1;
+}
+
+.end-game-block{
+    text-align: right;
+    margin-top: -400px;
+    margin-right: 150px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    visibility: hidden;
+}
+
+@media only screen and (max-width:1000px){
+    .end-game-block{
+        margin: 0 auto;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        visibility: hidden;
+    }
+}
+
+
+.end-game-block .winner-title{
+    font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+.end-game-block .remuch-btn{
+  width: 175px;
+  height: 45px;
+  background-color: #2980b9;
+  border-radius: 1px;
+  border: none;
+  font-family: 'Montserrat-Regular', serif;
+  color: #fff;
+  font-size: 20px;  
+}
+
+.end-game-block .remuch-btn:hover {
+    background-color: #3498db; 
+}

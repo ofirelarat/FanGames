@@ -3,24 +3,12 @@ body {
 }
 
 .end-game-block{
-    text-align: right;
-    margin-top: -400px;
-    margin-right: 150px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    left: 210px;
+    position: relative;
     visibility: hidden;
 }
-
-@media only screen and (max-width:1000px){
-    .end-game-block{
-        margin: 0 auto;
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 300;
-        visibility: hidden;
-    }
-}
-
 
 .end-game-block .winner-title{
     font-family: 'Open Sans', sans-serif;
